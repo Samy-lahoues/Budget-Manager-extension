@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Budget Manager</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <span class="alert" id="alert"></span>
+    <h1>Budget manager</h1>
+    <h2>Total Spend: <span id="total">0</span></h2>
+    <h2>Limit: <span id="limit">200</span></h2>
+    <label for="amount">Enter Amount</label>
+    <input type="number" id="amount" min="0">
+    <div class="btns">
+        <button type="submit" class="submit" id="submit">Spend</button>
+        <button type="submit" class="submit" id="clear">Clear</button>
+    </div>
+    <script src="background.js"></script>
+</body>
+</html>

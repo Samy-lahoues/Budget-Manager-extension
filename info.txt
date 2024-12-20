@@ -1,0 +1,5 @@
+Browser action
+accept spending 
+display total spending
+limit - notify if reached
+option to reset total and limit
