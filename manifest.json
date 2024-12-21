@@ -16,5 +16,9 @@
         "default_icon": "images/placeholder_16x16.png",
         "default_popup" : "popup.html"
     },
+    "options_ui": {
+        "page" : "options.html",
+        "open_in_tab" : true
+    },
     "permissions":["storage"]
 }

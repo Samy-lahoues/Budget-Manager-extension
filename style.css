@@ -19,6 +19,7 @@ body{
     border-bottom-left-radius:5px ;
     border-bottom-right-radius:5px;
     font-size: 14px;
+    text-align: center;
     transform: translateX(-50%);
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);

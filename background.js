@@ -2,13 +2,16 @@
 const spendBtn = document.getElementById("submit");
 const alertSpan = document.getElementById("alert");
 const clearBtn = document.getElementById("clear");
-const displayTotal = document.getElementById("total");
+const displayTotal = document.getElementById("display-total");
+const displayLimit = document.getElementById("display-limit");
 const h1 = document.querySelector("h1");
 const amountInput = document.getElementById("amount");
 
 // Initialize total from localStorage or set to 0
 let total = parseFloat(localStorage.getItem("total")) || 0;
+let limit = parseFloat(localStorage.getItem("limit")) || 200;
 updateDisplayTotal(total);
+updateDisplayLimit(limit);
 
 // Event listener for the Spend button
 spendBtn.onclick = () => {
@@ -26,7 +29,7 @@ spendBtn.onclick = () => {
     updateDisplayTotal(total);
 
     // Check if the total is within the limit range
-    if (total >= 175 && total <= 200) {
+    if (total >= (limit - 25) && total <= limit) {
         showAlert("You've reached your limit", "red", "white");
     } else {
         clearAlert();
@@ -46,7 +49,9 @@ clearBtn.onclick = () => {
 function updateDisplayTotal(value) {
     displayTotal.textContent = value.toFixed(2);
 }
-
+function updateDisplayLimit(value){
+    displayLimit.textContent = value.toFixed(2);
+}
 function showAlert(message, bgColor, textColor) {
     h1.style.marginTop = "15px";
     alertSpan.style.backgroundColor = bgColor;

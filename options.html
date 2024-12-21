@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Manager Options</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+        .container{
+            margin-top: 50px;
+            margin-left: auto;
+            margin-right: auto;
+            width: 200px;
+        }
+        h1{
+            text-align: center;
+        }
+        .container > div{
+            display: flex;
+        }
+        .container > div > input{
+            margin-left: 15px;
+            width: 80%;
+            font-weight: bold;
+            outline: none;
+            padding: 10px 15px;
+        }
+        .container > div > input:active{
+            border: none;
+        }
+        .container > div > button{
+            color: white;
+            background-color: red;
+            font-weight: bold;
+            border: none;
+            padding: 10px 15px;
+            border-top-right-radius: 5px;
+            border-bottom-right-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Budget Manager</h1><br>
+        <div>
+            <input type="number" id="limit" min="1" placeholder="Enter limit">
+            <button type="submit" id="save-limit">Save</button>
+        </div><br>
+    </div>
+    <script src="options.js"></script>
+</body>
+</html>
